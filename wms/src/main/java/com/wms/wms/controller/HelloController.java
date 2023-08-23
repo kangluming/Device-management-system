@@ -19,6 +19,7 @@ public class HelloController {
 
     @GetMapping("/list")
     public List<User> list(){
-        return userService.list();
+
+        return userService.listAll();
     }
 }

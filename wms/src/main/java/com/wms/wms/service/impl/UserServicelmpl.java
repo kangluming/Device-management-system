@@ -6,6 +6,15 @@ import com.wms.wms.mapper.UserMapper;
 import com.wms.wms.service.UserService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 @Service
 public class UserServicelmpl extends ServiceImpl<UserMapper, User> implements UserService {
+    @Resource
+    private UserMapper userMapper;
+    @Override
+    public List<User> listAll() {
+        return userMapper.listAll();
+    }
 }
